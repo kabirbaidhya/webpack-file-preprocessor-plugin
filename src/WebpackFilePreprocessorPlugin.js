@@ -7,8 +7,6 @@ function WebpackFilePreprocessorPlugin(options) {
     this.options = Object.assign({
         debug: false
     }, options);
-
-    // Configure your plugin with options...
 }
 
 WebpackFilePreprocessorPlugin.prototype.apply = function (compiler) {

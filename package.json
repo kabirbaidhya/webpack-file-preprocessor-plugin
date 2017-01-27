@@ -1,11 +1,9 @@
 {
-  "name": "get-js",
-  "version": "0.0.4-0",
-  "description": "A lightweight promise based package to load scripts on the fly",
+  "name": "webpack-file-preprocessor-plugin",
+  "version": "0.0.0",
+  "description": "Webpack File Preprocessor Plugin",
   "main": "index.js",
-  "dependencies": {
-    "angular": "^1.3.*"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.7.7",
     "babel-loader": "^6.2.4",
@@ -20,28 +18,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kabirbaidhya/get-js.git"
+    "url": "git+https://github.com/kabirbaidhya/webpack-file-preprocessor-plugin.git"
   },
   "author": "Kabir Baidhya <kabirbaidhya@gmail.com>",
   "keywords": [
     "javascript",
-    "dynamically",
-    "load-script",
-    "get-script",
-    "load-js",
-    "promise",
-    "get-js",
-    "async",
-    "get",
-    "es6",
-    "angular",
-    "$q"
+    "webpack",
+    "file-loader",
+    "preprocessor",
+    "plugin",
+    "file"
   ],
   "files": [
     "lib",
     "dist",
     "index.js",
-    "angular.js",
     "LICENSE",
     "README.md",
     "package.json"
