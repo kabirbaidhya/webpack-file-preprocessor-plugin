@@ -1,7 +1,7 @@
 {
   "name": "webpack-file-preprocessor-plugin",
   "version": "0.0.0",
-  "description": "Webpack File Preprocessor Plugin",
+  "description": "A lightweight yet generic webpack plugin for pre-processing assets before emitting.",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
