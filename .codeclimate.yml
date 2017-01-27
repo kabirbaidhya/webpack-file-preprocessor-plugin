@@ -12,7 +12,6 @@ ratings:
   paths:
   - src/**
 exclude_paths:
-- dist/*
 - lib/**/*
 - tests/**/*
 - coverage/**/*

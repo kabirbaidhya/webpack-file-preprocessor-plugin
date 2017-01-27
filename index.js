@@ -1,1 +1,1 @@
-module.exports = require('./lib/get.js').default;
+module.exports = require('./lib/WebpackFilePreprocessorPlugin').default;
