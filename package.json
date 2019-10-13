@@ -6,7 +6,10 @@
   "engines": {
     "node": ">=8"
   },
-  "dependencies": {},
+  "dependencies": {
+    "webpack": "^4.41.1",
+    "webpack-sources": "^1.4.3"
+  },
   "devDependencies": {
     "@babel/cli": "^7.6.4",
     "@babel/core": "^7.6.4",
@@ -20,7 +23,10 @@
     "clean": "rm -rf lib/",
     "transpile": "babel src -d lib",
     "build": "npm run clean && npm run transpile",
-    "prepublish": "npm run build"
+    "prepublishOnly": "npm run build"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "repository": {
     "type": "git",
