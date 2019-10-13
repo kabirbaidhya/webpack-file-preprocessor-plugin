@@ -1,6 +1,6 @@
 {
   "name": "@jkroepke/webpack-file-preprocessor-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An updated version of a lightweight yet generic webpack plugin for pre-processing assets before emitting.",
   "main": "index.js",
   "engines": {
