@@ -24,10 +24,12 @@ class WebpackFilePreprocessorPlugin {
       }
 
       // Loop through the compilation assets
-      Object.entries(compilation.assets).forEach((filename, asset) => {
+      Object.keys(compilation.assets).forEach((filename) => {
         if (!options.pattern.test(filename)) {
           return;
         }
+
+        const asset = compilation.assets[filename];
 
         const processed = options.process(asset.source(), filename); // Trigger the process callback
         const size = asset.size();
