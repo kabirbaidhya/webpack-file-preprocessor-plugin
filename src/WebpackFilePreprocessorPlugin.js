@@ -24,7 +24,7 @@ class WebpackFilePreprocessorPlugin {
       }
 
       // Loop through the compilation assets
-      Object.keys(compilation.assets).forEach((filename) => {
+      Object.keys(compilation.assets).map((filename) => {
         if (!options.pattern.test(filename)) {
           return;
         }
