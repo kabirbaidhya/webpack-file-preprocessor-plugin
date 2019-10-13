@@ -1,6 +1,6 @@
 # Webpack File Preprocessor Plugin
-[![NPM Version](https://img.shields.io/npm/v/jkroepke/webpack-file-preprocessor-plugin.svg?style=flat-square)](https://www.npmjs.com/package/@jkroepke/webpack-file-preprocessor-plugin)
-[![NPM Downloads](https://img.shields.io/npm/dt/jkroepke/webpack-file-preprocessor-plugin.svg?style=flat-square)](https://www.npmjs.com/package/@jkroepke/webpack-file-preprocessor-plugin)
+[![NPM Version](https://img.shields.io/npm/v/@jkroepke/webpack-file-preprocessor-plugin.svg?style=flat-square)](https://www.npmjs.com/package/@jkroepke/webpack-file-preprocessor-plugin)
+[![NPM Downloads](https://img.shields.io/npm/dt/@jkroepke/webpack-file-preprocessor-plugin.svg?style=flat-square)](https://www.npmjs.com/package/@jkroepke/webpack-file-preprocessor-plugin)
 
 A lightweight yet generic webpack plugin for pre-processing assets before emitting.
 
