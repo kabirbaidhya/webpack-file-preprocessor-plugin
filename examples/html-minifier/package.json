@@ -1,0 +1,15 @@
+{
+  "name": "webpack-file-preprocessor-plugin-example",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "file-loader": "^4.2.0",
+    "html-minifier": "^4.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-file-preprocessor-plugin": "0.0.1"
+  }
+}
