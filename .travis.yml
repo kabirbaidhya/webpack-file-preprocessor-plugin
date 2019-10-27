@@ -2,6 +2,13 @@ language: node_js
 node_js:
   - "node"
   - "8"
+before_install: |
+  set -e
+  export PATH="./$HOME/node_modules/.bin:$PATH"
+  date
 install: |
   set -e
-services: 
+  date
+  npm install
+  date
+script:  npm run prepublish && npm run test 2>&1
