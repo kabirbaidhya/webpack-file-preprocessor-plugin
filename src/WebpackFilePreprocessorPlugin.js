@@ -2,7 +2,7 @@ import { RawSource } from 'webpack-sources';
 import { validateOptions, forEach } from './util';
 
 /**
- * Webpack File Preprocessor Plugin
+ * Webpack File Preprocessor Plugin.
  */
 class WebpackFilePreprocessorPlugin {
   /**
