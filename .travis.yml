@@ -9,6 +9,6 @@ before_install: |
 install: |
   set -e
   date
-  npm install
+  yarn install
   date
-script:  npm run prepublish && npm run test 2>&1
+script:  yarn run prepublish && yarn run test 2>&1
