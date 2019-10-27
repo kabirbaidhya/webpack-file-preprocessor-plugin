@@ -1,7 +1,5 @@
-const webpack = require('webpack');
 const WebpackFilePreprocessorPlugin = require('webpack-file-preprocessor-plugin');
 const minifyHtml = require('html-minifier').minify;
-const path = require('path');
 
 module.exports = {
   entry: ['./src/index.html'],
@@ -25,8 +23,7 @@ module.exports = {
       // RegExp pattern to filter assets for pre-processing.
       pattern: /\.html$/,
       // Do your processing in this process function.
-      process: source =>
-        minifyHtml(source.toString(), { collapseWhitespace: true })
+      process: source => minifyHtml(source.toString(), { collapseWhitespace: true })
     })
   ]
 };
