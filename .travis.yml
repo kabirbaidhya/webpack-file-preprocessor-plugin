@@ -11,4 +11,4 @@ install: |
   date
   yarn install
   date
-script:  yarn run prepublish && yarn run test 2>&1
+script:  yarn run prepublish && yarn run test 2>&1 && yarn run lint
