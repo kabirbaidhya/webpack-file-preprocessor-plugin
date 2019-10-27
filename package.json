@@ -10,6 +10,7 @@
     "@babel/preset-env": "^7.6.3",
     "eslint": "6.5.1",
     "eslint-config-leapfrog": "^2.0.1",
+    "chai": "^4.2.0",
     "mocha": "^6.2.2"
   },
   "scripts": {
