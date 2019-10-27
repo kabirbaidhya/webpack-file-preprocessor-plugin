@@ -11,8 +11,8 @@
     "eslint-config-leapfrog": "^2.0.1"
   },
   "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
+    "lint": "eslint . src examples *.{js,json}",
+    "lint:fix": "eslint --fix src examples *.js",
     "clean": "rm -rf lib/",
     "transpile": "babel src -d lib",
     "build": "npm run clean && npm run transpile",
