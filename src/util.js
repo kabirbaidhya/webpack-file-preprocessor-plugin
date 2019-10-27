@@ -22,7 +22,7 @@ export function validateOptions(options) {
  * @param callback
  */
 export function forEach(object, callback) {
-  for (var key in object) {
+  for (const key in object) {
     if (!object.hasOwnProperty(key)) {
       continue;
     }

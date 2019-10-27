@@ -34,10 +34,10 @@ class WebpackFilePreprocessorPlugin {
           return;
         }
 
-        let processed = options.process(asset.source(), filename); // Trigger the process callback
-        let size = asset.size();
-        let processedSize = processed.length;
-        let ratio = Number(100 - (processedSize * 100) / size).toPrecision(3);
+        const processed = options.process(asset.source(), filename); // Trigger the process callback
+        const size = asset.size();
+        const processedSize = processed.length;
+        const ratio = Number(100 - (processedSize * 100) / size).toPrecision(3);
 
         if (options.debug === true) {
           console.info(` - ${filename} \t\t${size}B -> ${processedSize}B\t\t[${ratio} %]`);

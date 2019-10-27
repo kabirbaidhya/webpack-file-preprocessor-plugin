@@ -1,18 +1,18 @@
-const webpack = require("webpack");
-const WebpackFilePreprocessorPlugin = require("webpack-file-preprocessor-plugin");
-const minifyHtml = require("html-minifier").minify;
-const path = require("path");
+const webpack = require('webpack');
+const WebpackFilePreprocessorPlugin = require('webpack-file-preprocessor-plugin');
+const minifyHtml = require('html-minifier').minify;
+const path = require('path');
 
 module.exports = {
-  entry: ["./src/index.html"],
+  entry: ['./src/index.html'],
   module: {
     rules: [
       {
         test: /\.html$/,
         use: {
-          loader: "file-loader",
+          loader: 'file-loader',
           options: {
-            name: "[name].html"
+            name: '[name].html'
           }
         }
       }
