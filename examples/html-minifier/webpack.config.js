@@ -1,18 +1,17 @@
-const webpack = require("webpack");
-const WebpackFilePreprocessorPlugin = require("webpack-file-preprocessor-plugin");
-const minifyHtml = require("html-minifier").minify;
-const path = require("path");
+const WebpackFilePreprocessorPlugin = require('webpack-file-preprocessor-plugin');
+const minifyHtml = require('html-minifier').minify;
 
 module.exports = {
-  entry: ["./src/index.html"],
+  mode: 'production',
+  entry: ['./src/index.html'],
   module: {
     rules: [
       {
         test: /\.html$/,
         use: {
-          loader: "file-loader",
+          loader: 'file-loader',
           options: {
-            name: "[name].html"
+            name: '[name].html'
           }
         }
       }
@@ -25,8 +24,7 @@ module.exports = {
       // RegExp pattern to filter assets for pre-processing.
       pattern: /\.html$/,
       // Do your processing in this process function.
-      process: source =>
-        minifyHtml(source.toString(), { collapseWhitespace: true })
+      process: source => minifyHtml(source.toString(), { collapseWhitespace: true })
     })
   ]
 };

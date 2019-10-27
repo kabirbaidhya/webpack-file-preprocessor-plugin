@@ -2,55 +2,68 @@ import { RawSource } from 'webpack-sources';
 import { validateOptions, forEach } from './util';
 
 /**
- * Webpack File Preprocessor Plugin
+ * Webpack File Preprocessor Plugin.
  */
 class WebpackFilePreprocessorPlugin {
-    constructor(options) {
-        this.options = Object.assign({
-            debug: false
-        }, options);
+  /**
+   * Creates an instance of WebpackFilePreprocessorPlugin.
+   *
+   * @param {*} options
+   */
+  constructor(options) {
+    this.options = Object.assign(
+      {
+        debug: false
+      },
+      options
+    );
+  }
+
+  /**
+   * Apply the plugin during compilation.
+   *
+   * @param {*} compiler
+   */
+  apply(compiler) {
+    const options = this.options;
+
+    if (!validateOptions(options)) {
+      console.warn('WARNING WebpackFilePreprocessorPlugin instantiated with invalid options.');
+
+      return;
     }
 
-    apply(compiler) {
-        const options = this.options;
+    compiler.plugin('emit', (compilation, callback) => {
+      if (options.debug === true) {
+        process.stdout.write('Preprocessing Assets:\n');
+      }
 
-        if (!validateOptions(options)) {
-            console.warn('WARNING WebpackFilePreprocessorPlugin instantiated with invalid options.');
-
-            return;
+      // Loop through the compilation assets
+      forEach(compilation.assets, (asset, filename) => {
+        if (!options.pattern.test(filename)) {
+          return;
         }
 
-        compiler.plugin('emit', (compilation, callback) => {
-            if (options.debug === true) {
-                console.info('Preprocessing Assets:\n');
-            }
+        const processed = options.process(asset.source(), filename); // Trigger the process callback
+        const size = asset.size();
+        const processedSize = processed.length;
+        const ratio = Number(100 - (processedSize * 100) / size).toPrecision(3);
 
-            // Loop through the compilation assets
-            forEach(compilation.assets, (asset, filename) => {
-                if (!options.pattern.test(filename)) {
-                    return;
-                }
+        if (options.debug === true) {
+          process.stdout.write(` - ${filename} \t\t${size}B -> ${processedSize}B\t\t[${ratio} %]\n`);
+        }
 
-                let processed = options.process(asset.source(), filename); // Trigger the process callback
-                let size = asset.size();
-                let processedSize = processed.length;
-                let ratio = Number(100 - (processedSize * 100 / size)).toPrecision(3);
+        // Replace the source file with minified html
+        compilation.assets[filename] = new RawSource(processed);
+      });
 
-                if (options.debug === true) {
-                    console.info(` - ${filename} \t\t${size}B -> ${processedSize}B\t\t[${ratio} %]`);
-                }
+      if (options.debug === true) {
+        process.stdout.write('\n');
+      }
 
-                // Replace the source file with minified html
-                compilation.assets[filename] = new RawSource(processed);
-            });
-
-            if (options.debug === true) {
-                console.info('\n');
-            }
-
-            callback();
-        });
-    }
+      callback();
+    });
+  }
 }
 
 export default WebpackFilePreprocessorPlugin;
