@@ -15,8 +15,8 @@
     "lint:fix": "eslint --fix src examples *.js",
     "clean": "rm -rf lib/",
     "transpile": "babel src -d lib",
-    "build": "npm run clean && npm run transpile",
-    "prepublish": "npm run build"
+    "build": "yarn clean && yarn transpile",
+    "prepublish": "yarn build"
   },
   "repository": {
     "type": "git",
