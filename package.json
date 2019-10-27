@@ -9,9 +9,7 @@
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
     "eslint": "6.5.1",
-    "eslint-config-leapfrog": "^2.0.1",
-    "chai": "^4.2.0",
-    "mocha": "^6.2.2"
+    "eslint-config-leapfrog": "^2.0.1"
   },
   "scripts": {
     "lint": "eslint . src examples *.js",
@@ -19,8 +17,7 @@
     "clean": "rm -rf lib/",
     "transpile": "babel src -d lib",
     "build": "yarn clean && yarn transpile",
-    "prepublish": "yarn build",
-    "test": "mocha test/**/*.js"
+    "prepublish": "yarn build"
   },
   "repository": {
     "type": "git",
