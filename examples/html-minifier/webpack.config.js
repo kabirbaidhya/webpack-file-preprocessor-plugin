@@ -2,6 +2,7 @@ const WebpackFilePreprocessorPlugin = require('webpack-file-preprocessor-plugin'
 const minifyHtml = require('html-minifier').minify;
 
 module.exports = {
+  mode: 'production',
   entry: ['./src/index.html'],
   module: {
     rules: [
