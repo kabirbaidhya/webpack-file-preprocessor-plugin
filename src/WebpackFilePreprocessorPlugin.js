@@ -5,6 +5,11 @@ import { validateOptions, forEach } from './util';
  * Webpack File Preprocessor Plugin
  */
 class WebpackFilePreprocessorPlugin {
+  /**
+   * Creates an instance of WebpackFilePreprocessorPlugin.
+   *
+   * @param {*} options
+   */
   constructor(options) {
     this.options = Object.assign(
       {
@@ -14,6 +19,11 @@ class WebpackFilePreprocessorPlugin {
     );
   }
 
+  /**
+   * Apply the plugin during compilation.
+   *
+   * @param {*} compiler
+   */
   apply(compiler) {
     const options = this.options;
 
@@ -25,7 +35,7 @@ class WebpackFilePreprocessorPlugin {
 
     compiler.plugin('emit', (compilation, callback) => {
       if (options.debug === true) {
-        console.info('Preprocessing Assets:\n');
+        process.stdout.write('Preprocessing Assets:\n');
       }
 
       // Loop through the compilation assets
@@ -40,7 +50,7 @@ class WebpackFilePreprocessorPlugin {
         const ratio = Number(100 - (processedSize * 100) / size).toPrecision(3);
 
         if (options.debug === true) {
-          console.info(` - ${filename} \t\t${size}B -> ${processedSize}B\t\t[${ratio} %]`);
+          process.stdout.write(` - ${filename} \t\t${size}B -> ${processedSize}B\t\t[${ratio} %]\n`);
         }
 
         // Replace the source file with minified html
@@ -48,7 +58,7 @@ class WebpackFilePreprocessorPlugin {
       });
 
       if (options.debug === true) {
-        console.info('\n');
+        process.stdout.write('\n');
       }
 
       callback();
