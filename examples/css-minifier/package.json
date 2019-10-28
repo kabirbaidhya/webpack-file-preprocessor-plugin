@@ -1,0 +1,18 @@
+{
+  "name": "css-minifier-example",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "cssnano": "^4.1.10",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9"
+  },
+  "dependencies": {
+  }
+}
