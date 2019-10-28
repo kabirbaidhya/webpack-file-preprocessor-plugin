@@ -67,6 +67,10 @@ module.exports = {
 1. [HTML Minifier](examples/html-minifier) - A simple example of minifying raw HTML files before they're emitted using this plugin.
 2. [JS Minifier](examples/js-minifier) - A simple example of minifying javascript files before they're emitted using this plugin.
 
+## Changelog
+
+Check the [CHANGELOG](CHANGELOG.md) for release history.
+
 ## License
 
 Licensed under [MIT](LICENSE).
