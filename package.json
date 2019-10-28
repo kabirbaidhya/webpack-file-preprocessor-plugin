@@ -20,7 +20,8 @@
     "transpile": "babel src -d lib",
     "build": "yarn clean && yarn transpile",
     "prepublish": "yarn build",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "codecov": "codecov"
   },
   "repository": {
     "type": "git",
