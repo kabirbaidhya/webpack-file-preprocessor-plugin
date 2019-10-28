@@ -18,7 +18,6 @@ $ yarn add webpack-file-preprocessor-plugin --dev
 This example demonstrates how to use this plugin to minify the html assets loaded using `file-loader`.
 
 ```javascript
-const webpack = require('webpack');
 const WebpackFilePreprocessorPlugin = require('webpack-file-preprocessor-plugin');
 const minifyHtml = require('html-minifier').minify;
 
