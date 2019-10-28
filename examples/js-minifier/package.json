@@ -1,0 +1,16 @@
+{
+  "name": "webpack-file-preprocessor-plugin-example-for-js",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "uglify-js": "^3.6.4",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-file-preprocessor-plugin": "0.0.1"
+  },
+  "dependencies": {
+  }
+}
