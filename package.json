@@ -8,6 +8,7 @@
     "@babel/cli": "^7.6.4",
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
+    "codecov": "^3.6.1",
     "eslint": "6.5.1",
     "eslint-config-leapfrog": "^2.0.1",
     "jest": "^24.9.0"
@@ -19,7 +20,8 @@
     "transpile": "babel src -d lib",
     "build": "yarn clean && yarn transpile",
     "prepublish": "yarn build",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "codecov": "codecov"
   },
   "repository": {
     "type": "git",
@@ -31,6 +33,7 @@
       "lcov"
     ],
     "coverageDirectory": "<rootDir>/test/coverage/",
+    "collectCoverage": true,
     "testPathIgnorePatterns": [
       "<rootDir>/test/coverage/"
     ],
