@@ -9,7 +9,8 @@
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
     "eslint": "6.5.1",
-    "eslint-config-leapfrog": "^2.0.1"
+    "eslint-config-leapfrog": "^2.0.1",
+    "jest": "^24.9.0"
   },
   "scripts": {
     "lint": "eslint . src examples *.js",
@@ -17,11 +18,34 @@
     "clean": "rm -rf lib/",
     "transpile": "babel src -d lib",
     "build": "yarn clean && yarn transpile",
-    "prepublish": "yarn build"
+    "prepublish": "yarn build",
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kabirbaidhya/webpack-file-preprocessor-plugin.git"
+  },
+  "jest": {
+    "coverageReporters": [
+      "text",
+      "lcov"
+    ],
+    "coverageDirectory": "<rootDir>/test/coverage/",
+    "testPathIgnorePatterns": [
+      "<rootDir>/test/coverage/"
+    ],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/test/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 2,
+        "functions": 2,
+        "lines": 2,
+        "statements": 2
+      }
+    }
   },
   "author": "Kabir Baidhya <kabirbaidhya@gmail.com>",
   "keywords": [

@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - "node"
+  - "8"
+before_install: |
+  set -e
+  export PATH="./$HOME/node_modules/.bin:$PATH"
+  date
+install: |
+  set -e
+  date
+  yarn install
+  date
+script:  yarn run prepublish && yarn run test 2>&1 && yarn run lint
