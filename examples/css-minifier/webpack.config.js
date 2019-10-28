@@ -3,8 +3,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
-  mode: "production",
-  entry: ["./src/style.css"],
+  mode: 'production',
+  entry: ['./src/style.css'],
   optimization: {
     minimizer: [new OptimizeCSSAssetsPlugin({
       assetNameRegExp: /\.css$/,
