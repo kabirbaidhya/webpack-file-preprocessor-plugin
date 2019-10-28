@@ -32,6 +32,7 @@
       "lcov"
     ],
     "coverageDirectory": "<rootDir>/test/coverage/",
+    "collectCoverage": true,
     "testPathIgnorePatterns": [
       "<rootDir>/test/coverage/"
     ],
