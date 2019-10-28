@@ -1,6 +1,6 @@
 # HTML Minifier Example
 
-A simple example of emitted html minification using this plugin.
+A simple example of minifying raw HTML files before they're emitted using this plugin.
 
 ## Trying out
 
