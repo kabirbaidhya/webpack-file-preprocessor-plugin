@@ -1,5 +1,11 @@
 # Webpack File Preprocessor Plugin
-[![NPM Version](https://img.shields.io/npm/v/webpack-file-preprocessor-plugin.svg?style=flat-square&color=blue)](https://www.npmjs.com/package/webpack-file-preprocessor-plugin)&nbsp; [![Travis Build](https://img.shields.io/travis/com/kabirbaidhya/webpack-file-preprocessor-plugin/master?style=flat-square&color=brightgreen)](https://travis-ci.com/kabirbaidhya/webpack-file-preprocessor-plugin)&nbsp; [![Code Coverage](https://img.shields.io/codecov/c/github/kabirbaidhya/webpack-file-preprocessor-plugin/master?style=flat-square&color=brightgreen)](https://codecov.io/gh/kabirbaidhya/webpack-file-preprocessor-plugin)&nbsp; [![NPM license](https://img.shields.io/npm/l/webpack-file-preprocessor-plugin?style=flat-square&color=brightgreen)](https://github.com/kabirbaidhya/webpack-file-preprocessor-plugin/blob/master/LICENSE)&nbsp; [![PRs](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=flat-square)](https://github.com/kabirbaidhya/webpack-file-preprocessor-plugin/pulls)&nbsp; [![NPM Downloads](https://img.shields.io/npm/dt/webpack-file-preprocessor-plugin.svg?style=flat-square&color=brightgreen)](https://www.npmjs.com/package/webpack-file-preprocessor-plugin)
+
+[![NPM Version](https://img.shields.io/npm/v/webpack-file-preprocessor-plugin.svg?style=flat-square&color=blue)](https://www.npmjs.com/package/webpack-file-preprocessor-plugin)
+[![NPM Downloads](https://img.shields.io/npm/dt/webpack-file-preprocessor-plugin.svg?style=flat-square&color=brightgreen)](https://www.npmjs.com/package/webpack-file-preprocessor-plugin)
+[![Travis Build](https://img.shields.io/travis/com/kabirbaidhya/webpack-file-preprocessor-plugin/master?style=flat-square&color=brightgreen)](https://travis-ci.com/kabirbaidhya/webpack-file-preprocessor-plugin)
+[![Code Coverage](https://img.shields.io/codecov/c/github/kabirbaidhya/webpack-file-preprocessor-plugin/master?style=flat-square&color=brightgreen)](https://codecov.io/gh/kabirbaidhya/webpack-file-preprocessor-plugin)
+[![NPM license](https://img.shields.io/npm/l/webpack-file-preprocessor-plugin?style=flat-square&color=brightgreen)](https://github.com/kabirbaidhya/webpack-file-preprocessor-plugin/blob/master/LICENSE)
+[![PRs](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=flat-square)](https://github.com/kabirbaidhya/webpack-file-preprocessor-plugin/pulls)
 
 A lightweight yet generic webpack plugin for pre-processing assets before emitting.
 
@@ -55,3 +61,12 @@ module.exports = {
   ]
 };
 ```
+
+## Examples
+
+1. [HTML Minifier](examples/html-minifier) - A simple example of minifying raw HTML files before they're emitted using this plugin.
+2. [JS Minifier](examples/js-minifier) - A simple example of minifying javascript files before they're emitted using this plugin.
+
+## License
+
+Licensed under [MIT](LICENSE).
