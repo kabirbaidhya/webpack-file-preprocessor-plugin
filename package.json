@@ -21,7 +21,9 @@
     "build": "yarn clean && yarn transpile",
     "prepublish": "yarn build",
     "test": "jest --coverage",
-    "codecov": "codecov"
+    "codecov": "codecov",
+    "changelog": "./release.sh changelog",
+    "bump": "./release.sh bump"
   },
   "repository": {
     "type": "git",
