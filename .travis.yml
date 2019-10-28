@@ -9,6 +9,8 @@ before_install: |
 install: |
   set -e
   date
-  yarn install
+  yarn
   date
-script:  yarn run prepublish && yarn run test 2>&1 && yarn run lint
+script:
+  - yarn lint && yarn build && yarn test
+  - yarn codecov
