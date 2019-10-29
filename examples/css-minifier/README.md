@@ -1,6 +1,6 @@
-# JavaScript Minifier Example
+# CSS Minifier Example
 
-A simple example of minifying javascript files before they're emitted using this plugin.
+A simple example of minifying css files before they're emitted using this plugin.
 
 ## Trying out
 
@@ -16,7 +16,7 @@ Run build.
 $ yarn build
 ```
 
-![Building](misc/screenshot.png)
+![Building](misc/css-minifier.png)
 
 ## Configuration
 
